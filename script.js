@@ -35,7 +35,7 @@ function addItemtoShoppingList() {
 
 function setDeleteButtonEvent(id) {
 	let deleteButton = document.getElementById("button"+id);
-	deleteButton.addEventListener("click", () => {
+	deleteButton.addEventListener('click', () => {
 	removeListItem(id);
 	});
 }
@@ -43,12 +43,12 @@ function setDeleteButtonEvent(id) {
 function createListItemHtml(itemName, itemAmount, id) {
 	return `<li id="item${id}">
 		${itemName} - ${itemAmount}
-		<button id="button${id}" type="button">Delete Item</button>
-	</li>`;
+		<button type="button" id="'${id}'">Delete</button>
+	</li>`
 }
 
 function removeListItem(id) {
-	let listItem = document.getElementById("item"+id);
+	let listItem = document.getElementById('item'+id);
 	listItem.parentNode.removeChild(listItem);
 }
 
